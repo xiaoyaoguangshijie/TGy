@@ -40,6 +40,10 @@ docker run --name nginx-mtproxy -d -e tag="$tag" -e secret="$secret" -e domain="
 ```bash
 docker run --name nginx-mtproxy -d -e secret="$secret" -e domain="$domain" -e ip_white_list="OFF" -p 8081:80 -p 8443:443 ellermister/nginx-mtproxy:latest
 ```
+部署nginx-mtproxy添加白名单不添加TAG
+```bash
+docker run --name nginx-mtproxy -d -e secret="$secret" -e domain="$domain" -e ip_white_list="OFF" -p 8081:80 -p 8443:443 ellermister/nginx-mtproxy:latest
+```
 ip_white_list 可选参数为:
 
 IP 允许单个 IP 访问
